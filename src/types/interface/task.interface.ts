@@ -1,12 +1,14 @@
+import { TaskStatus } from '../enum/task.enum';
+
 export interface ITask {
-  name: string;
+  createdAt: Date;
+  createdBy: string;
   description: string;
+  dueDate: Date;
+  priority: Priority;
   status: TaskStatus;
-  date: Date;
+  title: string;
+  updatedAt: Date;
 }
 
-export enum TaskStatus {
-  TODO = 'todo',
-  IN_PROGRESS = 'in_progress',
-  DONE = 'done',
-}
+export type Priority = 'low' | 'medium' | 'high';

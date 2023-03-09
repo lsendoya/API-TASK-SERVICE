@@ -8,5 +8,3 @@ import { JwtStrategy } from './jwt.strategy';
   exports: [PassportModule],
 })
 export class AuthzModule {}
-
-//HFECJWPZZcM4vF6z

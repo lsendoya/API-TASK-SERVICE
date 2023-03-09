@@ -6,6 +6,7 @@ import helmet from 'helmet';
 import { AuthzModule } from './authz/authz.module';
 import { ConfigModule } from '@nestjs/config';
 import { MongooseModule } from '@nestjs/mongoose';
+import { UserModule } from './user/user.module';
 
 @Module({
   imports: [
@@ -13,6 +14,7 @@ import { MongooseModule } from '@nestjs/mongoose';
     AuthzModule,
     ConfigModule.forRoot(),
     MongooseModule.forRoot(process.env.MONGO_URI),
+    UserModule,
   ],
 })
 export class AppModule {
